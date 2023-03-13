@@ -1,0 +1,50 @@
+* {
+  /* box-sizing: border-box; */
+  text-align: center;
+}
+header {
+  background-image: url(/assets/img/beach.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 15%;
+  height: 100vh;
+  font-size: 12px;
+}
+
+h1 {
+  color: #926239;
+  text-align: center;
+}
+p {
+  color: #926239;
+  text-align: center;
+}
+.chapter-1 {
+  background-color: #926239;
+  text-align: center;
+  color: white;
+  
+}
+.chapter-2 {
+  text-align: center;
+  color: #926239;
+  display: block;
+  margin: 0px;
+}
+.class1 {
+  background-color: #926239;
+  color: white;
+  display: inline-block;
+  width: 33%;
+}
+.class2 {
+  color: #926239;
+  display: inline-block;
+  width: 33%;
+}
+.class3 {
+  background-color: #926239;
+  color: white;
+  display: inline-block;
+  width: 33%;
+}
