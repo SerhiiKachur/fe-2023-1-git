@@ -3,19 +3,20 @@
   text-align: center;
 }
 header {
-  background-image: url(/assets/img/beach.jpg);
+  background-image: url(/img/beach.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   padding-top: 15%;
   height: 100vh;
   font-size: 12px;
 }
-span {
+a {
   color: #926239;
   border-color: #926239;
   border-style: solid;
   padding: 5px;
   border-radius: 5px;
+  text-decoration: none;
   }
 #super {
     font-size: 9px;
