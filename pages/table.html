@@ -5,63 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Таблиця</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/tables.css">
-
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/tables.css" />
   </head>
   <body>
     <table>
       <thead>
         <tr>
-          <th>Choose your plan</th>
-          <th>starter $10 per mount</th>
-          <th>econom $30 per mount</th>
-          <th>standard $59 per mount</th>
-          <th>proffesional $99 per mount</th>
+          <th rowspan="4">Choose your plan</th>
+          <tr>
+            <td class="rate10">starter</td>
+            <td class="rate30">econom</td>
+            <td class="rate59">standard</td>
+            <td class="rate99">proffesional</td>
+          </tr>
+          <tr class="price">
+            <td class="rate10">$10</td>
+            <td class="rate30">$30</td>
+            <td class="rate59">$59</td>
+            <td class="rate99">$99</td>
+          </tr>
+          <tr>
+            <td class="rate10">per month</td>
+            <td class="rate30">per month</td>
+            <td class="rate59">per month</td>
+            <td class="rate99">per month</td>
+          </tr>
         </tr>
       </thead>
       <tbody>
-        <tr></tr>
-          <td>Amoutn of stpace</td>
+        <tr class="monitor1">
+          <td>Amoutn of space</td>
           <td>20GB</td>
           <td>40GB</td>
           <td>110GB</td>
-          <td>Unlimited</td>          
+          <td>Unlimited</td>
         </tr>
-        <tr>
+        <tr class="monitor2">
           <td>Bandwidth permount</td>
           <td>120GB</td>
           <td>240GB</td>
           <td>610GB</td>
           <td>1300GB</td>
         </tr>
-        <tr>
+        <tr class="monitor1">
           <td>Email accounts</td>
           <td>1</td>
           <td>15</td>
           <td>60</td>
           <td>Unlimited</td>
         </tr>
-        <tr>
+        <tr class="monitor2">
           <td>MySQl databases</td>
           <td>1</td>
           <td>15</td>
           <td>60</td>
           <td>Unlimited</td>
         </tr>
-        <tr>
+        <tr class="monitor1">
           <td>25h support</td>
           <td>No</td>
           <td>Yes</td>
           <td>Yes</td>
           <td>Yes</td>
         </tr>
-        <tr>
+        <tr class="monitor2">
           <td>Support tickets per month</td>
           <td>2</td>
           <td>6</td>
           <td>14</td>
           <td>20</td>
+        </tr>
+        <tr class="monitor1">
+        <td></td>
+        <td><a href="" id="button">START</a></td>
+        <td><a href="" id="button">START</a></td>
+        <td><a href="" id="button">START</a></td>
+        <td><a href="" id="button">START</a></td>
         </tr>
       </tbody>
     </table>
