@@ -1,71 +1,50 @@
 * {
   box-sizing: border-box;
-  vertical-align: auto;
   text-decoration: none;
 }
 table {
-  border: 3px rgb(0, 0, 0);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 0 auto;
-  vertical-align: middle;
-  width: 45vw;
 }
-
 td {
   padding: 15px 30px;
-  border: 2px solid rgba(0, 0, 0, 0);
   text-align: center;
-
 }
 th {
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-  padding: 60px 20px;
+  font-weight: bolder;
+  font-size: 25px;
   background-color: rgba(0, 0, 100, 0.2);
   color: white;
 }
 .rate10 {
   padding: 10px 20px;
-  margin: 0 auto;
-  text-align: center;
   font-weight: bold;
   background-color: rgba(0, 0, 100, 0.3);
-  width: 10px;
   color: white;
 }
 .rate30 {
   padding: 10px 20px;
-  margin: 0 auto;
-  text-align: center;
   font-weight: bold;
   background-color: rgba(0, 0, 50, 0.5);
-  width: 10px;
   color: white;
 }
 .rate59 {
   padding: 10px 20px;
-  margin: 0 auto;
-  text-align: center;
   font-weight: bold;
   background-color: rgba(0, 0, 50, 0.7);
-  width: 10px;
   color: white;
 }
 .rate99 {
   padding: 10px 20px;
-  margin: 0 auto;
-  text-align: center;
   font-weight: bold;
   background-color: rgba(0, 0, 50, 0.9);
-  width: 10px;
   color: white;
 }
 .price {
   font-size: 50px;
   font-weight: bolder;
-}
+  }
 .monitor1 {
   background-color: rgba(128, 128, 128, 0.2);
 }
@@ -77,5 +56,4 @@ th {
   padding: 10px 20px;
   background-color: rgba(128, 128, 128, 0.5);
   border: 1px solid rgba(128, 128, 128, 0.4);
-  }
-  
+}
