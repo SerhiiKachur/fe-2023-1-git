@@ -4,11 +4,12 @@
 }
 header {
   background-image: url(/img/beach.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 15%;
+  padding-top: 35vh;
+  padding: 0 auto;
   min-height: 100vh;
-  font-size: 12px;
+  font-size: 25px;
 }
 a {
   color: #926239;
@@ -17,10 +18,10 @@ a {
   padding: 5px;
   border-radius: 5px;
   text-decoration: none;
-  }
-#super {
-    font-size: 9px;
-  }
+}
+.super {
+  font-size: 10px;
+}
 h1 {
   color: #926239;
   text-align: center;
@@ -31,34 +32,38 @@ p {
 }
 .chapter-1 {
   background-color: #926239;
+  padding: 10px;
   text-align: center;
   color: white;
-  font-size: 12px;
-  
+  font-size: 16px;
 }
 .chapter-2 {
   text-align: center;
+  padding: 10px;
   color: #926239;
   display: block;
-  font-size: 12px;
+  font-size: 16px;
 }
 .class1 {
   background-color: #926239;
+  padding: 10px;
   color: white;
   display: inline-block;
   width: 33%;
-  font-size: 12px;
+  font-size: 16px;
 }
 .class2 {
   color: #926239;
+  padding: 10px;
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
   width: 33%;
 }
 .class3 {
   background-color: #926239;
   color: white;
+  padding: 10px;
   display: inline-block;
   width: 33%;
-  font-size: 12px;
+  font-size: 16px;
 }
