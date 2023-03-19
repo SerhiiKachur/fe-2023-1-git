@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+.head {
+margin-top:300px;
+}
+.face,
+.ear{
+  background-color: black;
+  border-radius: 50%;
+  }
+.face{
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+.ear{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: -200px;
+}
+.left{
+left: 400px;
+}
+.right{
+right: 400px;
+}
