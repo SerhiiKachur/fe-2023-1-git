@@ -1,34 +1,29 @@
 * {
   box-sizing: border-box;
-  text-align: center;
 }
-header {
-  background-image: url(/img/beach.jpg);
+body {
+  margin: 0;
+}
+.startscreen {
+  background-image: url(../img/beach.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   padding-top: 35vh;
-  padding: 0 auto;
   min-height: 100vh;
   font-size: 25px;
+  color: #926239;
+  text-align: center;
 }
-a {
+.btn {
+  display: inline-block;
   color: #926239;
   border-color: #926239;
   border-style: solid;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   text-decoration: none;
-}
-.super {
-  font-size: 10px;
-}
-h1 {
-  color: #926239;
-  text-align: center;
-}
-p {
-  color: #926239;
-  text-align: center;
+  font-size: 20px;
 }
 .chapter-1 {
   background-color: #926239;
@@ -41,10 +36,13 @@ p {
   text-align: center;
   padding: 10px;
   color: #926239;
-  display: block;
   font-size: 16px;
 }
-.class1 {
+.linecolors {
+  width: 99.9vw;
+  
+}
+.background {
   background-color: #926239;
   padding: 10px;
   color: white;
@@ -52,18 +50,14 @@ p {
   width: 33%;
   font-size: 16px;
 }
-.class2 {
+.section2 {
   color: #926239;
   padding: 10px;
   display: inline-block;
   font-size: 16px;
   width: 33%;
 }
-.class3 {
+.btn:hover {
   background-color: #926239;
   color: white;
-  padding: 10px;
-  display: inline-block;
-  width: 33%;
-  font-size: 16px;
 }
