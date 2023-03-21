@@ -3,11 +3,11 @@
   margin: 0px;
 }
 .allcards {
-padding: 10px 10px;
-display: inline-block;
-width: 100vw;
-height: 40vh;
-border: 3px solid black;
+  padding: 10px 10px;
+  display: inline-block;
+  width: 100vw;
+  height: 40vh;
+  border: 3px solid black;
 }
 .div {
   display: inline-block;
@@ -19,30 +19,51 @@ border: 3px solid black;
   color: rgb(255, 255, 255);
   position: relative;
 }
-.insidediv1{
+.insidediv1 {
   position: absolute;
   font-size: 30px;
-
   top: 40px;
   left: 75px;
 }
-.insidediv2{
+.insidediv2 {
   position: absolute;
   top: 100px;
   left: 75px;
   font-size: 50px;
 }
-.insidediv3{
+.insidediv3 {
   position: absolute;
   left: 75px;
   bottom: 40px;
 }
-.first{
-  background: linear-gradient()
+.first {
+  background: rgb(215, 64, 116);
+  background: linear-gradient(
+    262deg,
+    rgb(241, 96, 147) 39%,
+    rgba(240, 150, 182, 0.747) 65%
+  );
 }
 .second {
-  background-color: blue;
+  background: rgb(64, 112, 215);
+  background: linear-gradient(
+    262deg,
+    rgb(66, 97, 235) 39%,
+    rgba(142, 166, 231, 0.747) 65%
+  );
 }
-.third{
-  background-color: green;
+.third {
+  background: rgb(64, 215, 182);
+  background: linear-gradient(
+    262deg,
+    rgb(40, 189, 40) 39%,
+    rgba(158, 231, 158, 0.747) 65%
+  );
+}
+.icon {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  top: 40px;
+  right: 75px;
 }
