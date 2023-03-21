@@ -5,6 +5,7 @@
 .allcards {
   padding: 10px 10px;
   display: inline-block;
+  margin: 0 auto;
   width: 100vw;
   height: 40vh;
   border: 3px solid black;
@@ -21,7 +22,7 @@
 }
 .insidediv1 {
   position: absolute;
-  font-size: 30px;
+  font-size: 35px;
   top: 40px;
   left: 75px;
 }
@@ -30,6 +31,7 @@
   top: 100px;
   left: 75px;
   font-size: 50px;
+  font-weight: bold;
 }
 .insidediv3 {
   position: absolute;
@@ -66,4 +68,29 @@
   position: absolute;
   top: 40px;
   right: 75px;
+}
+.div::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(252, 252, 252);
+  border-radius: 50%;
+  padding: 150px;
+  display: inline-block;
+  z-index: 2;
+  opacity: 0.2;
+  bottom: -100px;
+  right: -40px;
+  overflow-inline: hidden;
+}
+.div::after {
+  content: "";
+  position: absolute;
+  background-color: aliceblue;
+  padding: 100px;
+  display: inline-block;
+  border-radius: 50%;
+  z-index: 3;
+  top: -20px;
+  right: -40px;
+  opacity: 0.2;
 }
