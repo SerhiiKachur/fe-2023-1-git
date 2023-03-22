@@ -1,10 +1,13 @@
 .container {
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
+
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  flex-flow: column wrap;
+
+  /* justify-content: space-between;
   align-items: stretch;
-  flex-wrap: wrap-reverse;
-  align-content: center;
+  align-content: center; */
   border: 5px solid;
   height: 100vh;
   text-align: center;
