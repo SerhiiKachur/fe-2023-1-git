@@ -25,3 +25,9 @@
   justify-content: space-evenly;
   align-items: center;
 }
+.ordered{
+  order: 1;
+}
+.ordered2{
+  order: 1;
+}
