@@ -27,7 +27,12 @@
 }
 .ordered{
   order: 1;
-}
+  }
 .ordered2{
   order: 1;
+
+}
+.self-align{
+  align-self: flex-end;
+  /* margin-bottom: auto; */
 }
