@@ -11,7 +11,7 @@
 }
 
 .item {
-  padding: 10px;
+  /* padding: 10px; */
   background-color: rgb(230, 255, 4);
   font-size: 50px;
   border: 5px solid rgb(255, 0, 0);
@@ -35,14 +35,17 @@
   order: 1;
 
 }
-.self-align{
-  align-self: flex-end;
+/* .self-align{ */
+  /* align-self: flex-end; */
   /* margin-bottom: auto; */
-}
-.flex-basis{
+/* } */
+/* .flex-basis{
   /* flex-basis: 100px; */
   /* width: 5px; */
   /* min-width: 200px;
-  max-width: 50px; */
-  flex-basis: 50px;
-} 
+  /* max-width: 50px; */
+  /* flex-basis: 50px; */
+/* }  */
+.flex-grow{
+  flex-grow: 1;
+}

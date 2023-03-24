@@ -39,7 +39,9 @@ body {
   font-size: 16px;
 }
 .linecolors {
-  width: 99.9vw;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
   
 }
 .background {
@@ -47,7 +49,7 @@ body {
   padding: 10px;
   color: white;
   display: inline-block;
-  width: 33%;
+  /* width: 33%; */
   font-size: 16px;
 }
 .section2 {
@@ -55,7 +57,7 @@ body {
   padding: 10px;
   display: inline-block;
   font-size: 16px;
-  width: 33%;
+  /* width: 33%; */
 }
 .btn:hover {
   background-color: #926239;
