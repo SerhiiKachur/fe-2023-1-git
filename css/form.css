@@ -1,15 +1,35 @@
+* {
+  box-sizing: border-box;
+}
 .form {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  max-width: 400px;
   margin: 0 auto;
   border: 1px solid black;
-  border-radius: 15px;
-  padding: 20px;
-  background-color: rgb(210, 248, 248);
-  font-size: large;
-  height: 400px;
+  padding: 30px;
 }
-label{
-  display: block;
+.heading {
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+}
+.persdata{
+  display:flex;
+  justify-content: center;
+  padding: 20px;
+}
+.regdata{
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 430px;
+  padding: 20px;
+  
+  
 }
