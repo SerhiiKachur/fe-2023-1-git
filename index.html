@@ -13,18 +13,20 @@
       <h1 class="heading">Register</h1>
       <p class="par">Create your account. Its free and only takes a minute</p>
       <fieldset class="persdata">
-        <input placeholder="First name" />
-        <input placeholder="Second name" />
+        <input class="name first-name" placeholder="First name" />
+        <input class="name last-name" placeholder="Last name" />
       </fieldset>
       <fieldset class="regdata">
-        <input placeholder="Email" />
-        <input placeholder="Password" />
-        <input placeholder="Confirm Password" />
+        <input class="data email" placeholder="Email" />
+        <input class="data password" placeholder="Password" />
+        <input class="data confpass" placeholder="Confirm Password" />
       </fieldset>
-      <label for="checkbox"
-        >I accept the <a href="#">Terms of Use</a> &
-        <a href="#">Privacy Policy</a><input type="checkbox" name="checkbox" />
-      </label>
+
+      <div class="rules">
+        <input class="cbox" type="checkbox" name="checkbox" /> I accept the
+        <a href="#">Terms of Use</a> &
+        <a href="#">Privacy Policy</a>
+      </div>
       <button class="btn" type="submit">Register Now</button>
     </form>
   </body>
