@@ -7,6 +7,12 @@
   /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 150px 1fr 1fr 150px;
+  /* grid-template-areas: "header header header header header"
+  "nav main main main aside"
+  "nav main main main div"
+  "footer footer footer footer footer";
+  grid-area "якась с зон "- росподіл зон по сітці через назви секцій, займає те що вкажемо!
+} */
 }
 .item {
   padding: 10px 20px;
