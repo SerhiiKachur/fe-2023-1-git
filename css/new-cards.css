@@ -1,37 +1,45 @@
 * {
   box-sizing: border-box;
-  margin: 0px;
+  margin: 0;
 }
 .allcards {
   padding: 10px 10px;
   display: inline-block;
 }
-.div {
-  margin:10px 10px;
+.card {
+  margin: 10px 10px;
   display: inline-block;
   border-radius: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 150px 300px;
+  padding: 125px 250px;
   color: rgb(255, 255, 255);
   position: relative;
+  overflow: hidden;
 }
-.insidediv1 {
+.heading {
   position: absolute;
   font-size: 35px;
   top: 40px;
   left: 75px;
 }
-.insidediv2 {
+.price {
   position: absolute;
   top: 100px;
   left: 75px;
   font-size: 50px;
   font-weight: bold;
 }
-.insidediv3 {
+.info {
   position: absolute;
   left: 75px;
   bottom: 40px;
+}
+.icon {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 40px;
+  right: 75px;
 }
 .first {
   background: rgb(215, 64, 116);
@@ -42,14 +50,6 @@
   );
 }
 .second {
-  background: rgb(64, 112, 215);
-  background: linear-gradient(
-    262deg,
-    rgb(66, 97, 235) 39%,
-    rgba(142, 166, 231, 0.747) 65%
-  );
-}
-.third {
   background: rgb(64, 215, 182);
   background: linear-gradient(
     262deg,
@@ -57,39 +57,38 @@
     rgba(158, 231, 158, 0.747) 65%
   );
 }
-.icon {
-  width: 50px;
-  height: 30px;
-  position: absolute;
-  top: 40px;
-  right: 75px;
+.third {
+  background: rgb(64, 112, 215);
+  background: linear-gradient(
+    262deg,
+    rgb(66, 97, 235) 39%,
+    rgba(142, 166, 231, 0.747) 65%
+  );
 }
-.div::before {
+.card:after {
   content: "";
   position: absolute;
   background-color: rgb(252, 252, 252);
   border-radius: 50%;
-  padding: 190px;
+  padding: 150px;
   opacity: 0.2;
-  bottom: -180px;
-  right: -120px;
-  overflow-inline: hidden;
+  bottom: -100px;
+  right: -60px;
 }
-.div::after {
+.card:before {
   content: "";
   position: absolute;
-  background-color: aliceblue;
-  padding: 100px;
-  display: inline-block;
+  background-color: white;
   border-radius: 50%;
+  padding: 100px;
+  opacity: 0.2;
   top: -20px;
   right: -40px;
-  opacity: 0.2;
 }
-.div:hover {
-  transform: translate(0px, 18px) scale(1.1);
-  transition: ease 0.4s;
-  background-color: rgb(0, 0, 0);
-  z-index: 200;
-  overflow: hidden;
+.card:hover {
+  transform: translate(0px, 18px) scale(1.3);
+  transition: ease 0.5s;
+  background-color: brown;
+  z-index: 2;
+  color:black;
 }
