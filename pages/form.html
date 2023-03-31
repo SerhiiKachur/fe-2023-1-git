@@ -5,26 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HMTL Form</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/form.css" />
   </head>
   <body>
     <form class="form">
       <h1 class="heading">Register</h1>
       <p class="par">Create your account. Its free and only takes a minute</p>
       <fieldset class="persdata">
-        <div class="name first-name"><input placeholder="First name" /></div>
-        <div class="name last-name"><input  placeholder="Last name" /></div>
+        <input class="name first-name" placeholder="First name" required name="first-name"/>
+        <input class="name second-name" placeholder="Last name" required name="second-name"/>
       </fieldset>
       <fieldset class="regdata">
-        <input class="data email" placeholder="Email" />
-        <input class="data password" placeholder="Password" />
-        <input class="data confpass" placeholder="Confirm Password" />
+        <input class="data email" placeholder="Email" required name="email"/>
+        <input class="data password" placeholder="Password" required name="password"/>
+        <input class="data confpass" placeholder="Confirm Password" required name="confirm password"/>
       </fieldset>
-
       <div class="rules">
-        <input class="cbox" type="checkbox" name="checkbox" /> I accept the
-        <a href="#">Terms of Use</a> &
+        <input class="cbox" type="checkbox" name="checkbox" required /> I accept
+        the <a href="#">Terms of Use</a> &
         <a href="#">Privacy Policy</a>
       </div>
       <button class="btn" type="submit">Register Now</button>
