@@ -42,7 +42,7 @@
   align-items: flex-end;
   position: absolute;
   top: -10px;
-  left: 10px;
+  left: 0px;
   opacity: 0.5;
 }
 .persdata {
