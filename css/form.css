@@ -15,6 +15,7 @@
   padding: 20px;
   font-family: "Ubuntu font", sans-serif;
   background-color: rgb(239, 246, 246);
+  
 }
 .heading {
   display: flex;
@@ -63,7 +64,7 @@
   opacity: 0.4;
   text-align: start;
   margin-bottom: 20px;
-}
+  }
 .data {
   margin: 0px 20px 20px 0px;
   display: flex;
@@ -87,4 +88,7 @@
 .rules {
   opacity: 0.5;
   width: 350px;
+}
+.link{
+  text-decoration: none;
 }
