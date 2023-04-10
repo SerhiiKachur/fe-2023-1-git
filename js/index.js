@@ -6,6 +6,7 @@
 // } else if (userPrice >= 500) {
 //   console.log(userPrice - userPrice * 0.05);
 // }
+
 let pencilPrice = 5;
 let paperPrice = 100;
 let rulerPrice = 25;
@@ -103,12 +104,10 @@ let totalRulerPrice = function () {
   }
   return rulerPrice;
 };
-// let pencilPrice = totalPencilPrice();
-// let paperPrice = totalPaperPrice();
-// let rulerPrice = totalRulerPrice();
+
 
 totalPencilPrice();
 totalPaperPrice();
 totalRulerPrice();
 
-console.log (pencilPrice+paperPrice+rulerPrice);
+console.log ((pencilPrice*userPencilCount)+(paperPrice*userPaperCount)+(rulerPrice*userRulerCount));
