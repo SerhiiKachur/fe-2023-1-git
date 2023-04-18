@@ -1,21 +1,12 @@
-// const user = {
-//   firsname : 'Serhii',
-//   secondname : 'Kachur',
-//   isMale : true,
-//   age : 33,
-//   speak : 'hello',
-// }
+const firstTaskArr = new Array(1, 2, 3);
 
-const User = function (firsname, lastname, isMale, age) {
-  this.firsname = firsname;
-  this.lastname = lastname;
-  this.isMale = isMale;
-  this.age = age;
-  this.speak = function () {
-    console.log("Hello, my name is " + firsname + " " + lastname);
-  };
-};
+const secondTaskArr = new Array(100, -273.15, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-const newUser = new User("Serhii", "Kachur", true, 33);
-const newUser2 = new User("Marina", "Filatova", false, 32);
+const thirdTaskArr = new Array(1, 2, 3, 4, 5);
+
+const fourthTaskArr = new Array(1, 2, 3, 4, 5);
+
+const fifthTaskArr = new Array(1, 2, 3, 4, 5);
+
+const sixthTaskArr = new Array(1, 2, 3, 4, 5);
 
