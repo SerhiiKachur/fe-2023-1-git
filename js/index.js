@@ -10,14 +10,13 @@ secondTaskArr.pop();
 secondTaskArr.shift();
 secondTaskArr.shift();
 console.log(secondTaskArr);
-// console.log(deletedSecondTaskArr);
+
 
 const thirdTaskArr = new Array(1, 2, 3, 4, 5);
 thirdTaskArr.splice(1,2);
 console.log(thirdTaskArr);
 
 const fourthTaskArr = new Array(1, 2, 3, 4, 5);
-
 const newFourthTaskArr = fourthTaskArr.splice(1,3);
 console.log(newFourthTaskArr);
 
