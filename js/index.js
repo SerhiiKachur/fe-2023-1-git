@@ -1,5 +1,5 @@
 const firstTaskArr = new Array(1, 2, 3);
-firstTaskArr.push(4,5,6);
+firstTaskArr.push(6,5,4);
 firstTaskArr.unshift(-3,-2,-1);
 console.log(firstTaskArr);
 
