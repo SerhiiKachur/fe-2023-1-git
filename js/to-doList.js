@@ -25,7 +25,7 @@ newForm.addEventListener ('submit', (e) => {
   const {target:formElement} = e;
   const { elements } = formElement;
   console.dir(formElement);
-  const taskFromInput = elements.input.value;
+  const taskFromInput = elements.input.value.trim();
   if(taskFromInput === ''){
     alert('You need to write something');
     return;
@@ -39,6 +39,8 @@ newForm.addEventListener ('submit', (e) => {
   deleteBtn.classList.add("delbtn");
   newLi.append(deleteBtn);
   deleteBtn.addEventListener("click", deleteTask);
+  newForm.reset();
+
 });
 
 
