@@ -1,12 +1,11 @@
 "use sctrict";
 
-
 const sectionContainer = document.getElementById("main-container");
-const newForm = document.createElement('form');
+const newForm = document.createElement("form");
 sectionContainer.append(newForm);
-const input = document.createElement('input');
+const input = document.createElement("input");
 newForm.append(input);
-input.setAttribute('name','input');
+input.setAttribute("name", "input");
 const tasksContainer = document.createElement("ol");
 sectionContainer.append(tasksContainer);
 tasksContainer.classList.add("main-container");
@@ -20,14 +19,14 @@ function deleteTask(e) {
   e.target.parentElement.remove();
 }
 
-newForm.addEventListener ('submit', (e) => {
+newForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const {target:formElement} = e;
+  const { target: formElement } = e;
   const { elements } = formElement;
   console.dir(formElement);
   const taskFromInput = elements.input.value.trim();
-  if(taskFromInput === ''){
-    alert('You need to write something');
+  if (taskFromInput === "") {
+    alert("You need to write something");
     return;
   }
   const newLi = document.createElement("li");
@@ -40,10 +39,4 @@ newForm.addEventListener ('submit', (e) => {
   newLi.append(deleteBtn);
   deleteBtn.addEventListener("click", deleteTask);
   newForm.reset();
-
 });
-
-
-
-
-
