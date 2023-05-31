@@ -23,7 +23,7 @@ newForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const { target: formElement } = e;
   const { elements } = formElement;
-  console.dir(formElement);
+  // console.dir(formElement);
   const taskFromInput = elements.input.value.trim();
   if (taskFromInput === "") {
     alert("You need to write something");
@@ -40,3 +40,5 @@ newForm.addEventListener("submit", (e) => {
   deleteBtn.addEventListener("click", deleteTask);
   newForm.reset();
 });
+
+
