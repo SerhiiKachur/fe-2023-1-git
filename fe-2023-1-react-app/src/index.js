@@ -6,16 +6,22 @@ import reportWebVitals from "./reportWebVitals";
 
 class Header extends React.Component {
   render() {
-    const h1 = React.createElement("h1", {}, "My Site");
+    // const h1 = React.createElement("h1", {}, "My Site");
 
-    const nav = React.createElement("nav", {}, "This is nav");
+    // const nav = React.createElement("nav", {}, "This is nav");
 
-    return React.createElement(
-      "header",
-      { id: "header", className: "class" },
-      "header",
-      h1,
-      nav
+    // return React.createElement(
+    //   "header",
+    //   { id: "header", className: "class" },
+    //   "header",
+    //   h1,
+    //   nav
+    // );
+    return (
+      <header id="header" className="class">
+        <h1>My Site</h1>
+        <nav>this is nav</nav>
+      </header>
     );
   }
 }
@@ -26,26 +32,26 @@ class Counter extends React.Component {
     this.state = {
       count: 0,
     };
-    // this.add = this.add.bind(this); метод відображення  this щоб не загубився або стрілковою функцією на прикладі метода add() вказано нижче! 
+    // this.add = this.add.bind(this); метод відображення  this щоб не загубився або стрілковою функцією на прикладі метода add() вказано нижче!
   }
 
-  add=()=> {
+  add = () => {
     console.log("+");
     // ++this.state.count; не відображає зміну в лічільнику
     // console.log(this.state.count);
 
     this.setState({
-      count: this.state.count+1,
-    })
-  }
-  substract=()=> {
+      count: this.state.count + 1,
+    });
+  };
+  substract = () => {
     console.log("-");
     // this.state.count--; не відображає зміну в лічільнику
     // console.log(this.state.count);
     this.setState({
-      count: this.state.count-1,
-    })
-  }
+      count: this.state.count - 1,
+    });
+  };
 
   render() {
     const { count } = this.state;
