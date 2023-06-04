@@ -10,6 +10,7 @@ class App extends React.Component {
         <Header />
         <Greeting name="User" />
         <Greeting name="Anton" />
+        <Greeting />
         <Counter />
       </div>
     );
