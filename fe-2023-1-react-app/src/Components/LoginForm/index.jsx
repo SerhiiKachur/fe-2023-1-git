@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.css';
+import styles from './style.module.css';
 
 function loginUser(email, password) {
   if (!email || !password) {
@@ -77,10 +77,10 @@ class LoginForm extends Component {
     const options = accountTypesArr.map(this.mapOptions);
 
     return (
-      <form onSubmit={this.submitHandler} className='form'>
+      <form onSubmit={this.submitHandler} className={styles.form}>
         <input
           onChange={this.handleChange}
-          className='input'
+          className={styles.input}
           type='email'
           name='email'
           placeholder='Email'
@@ -88,7 +88,7 @@ class LoginForm extends Component {
         />
         <input
           onChange={this.handleChange}
-          className='input'
+          className={styles.input}
           type='password'
           name='password'
           placeholder='Password'
@@ -134,7 +134,7 @@ class LoginForm extends Component {
           />{' '}
           Remember me
         </label>
-        <button className='btn'>Submit</button>
+        <button className={styles.btn}>Submit</button>
       </form>
     );
   }

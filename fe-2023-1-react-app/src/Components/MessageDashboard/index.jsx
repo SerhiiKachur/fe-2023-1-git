@@ -1,6 +1,7 @@
 import React from "react";
 import ImportantMessages from "../ImportantMessages";
 import Message from "../Message";
+import styles from "./style.module.css"
 
 const messagesData = [
   {
@@ -108,8 +109,8 @@ class MessageDashboard extends React.Component {
     return (
       <>
         <div>
-          <p>Sort order is {isDirectSort ? 'direct': 'reversed'}</p>
-          <button onClick={this.sortMessages}>Reverse order</button>
+          <p className={styles.display}>Sort order is {isDirectSort ? 'direct': 'reversed'}</p>
+          <button className={styles.btn} onClick={this.sortMessages}>Reverse order</button>
         </div>
         <div>
           <ImportantMessages messages={importantMessagesArr} />

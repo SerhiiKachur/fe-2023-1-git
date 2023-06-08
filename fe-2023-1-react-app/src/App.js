@@ -1,6 +1,7 @@
 import React from 'react';
 import StopWatch from './Components/StopWatch';
 import LoginForm from './Components/LoginForm';
+import MessageDashboard from './Components/MessageDashboard'
 
 class App extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class App extends React.Component {
         <button onClick={this.handleIsVisible}>Toggle Visibility</button>
         {isVisible && <StopWatch />}
         <LoginForm />
+        <MessageDashboard />
       </>
     );
   }
