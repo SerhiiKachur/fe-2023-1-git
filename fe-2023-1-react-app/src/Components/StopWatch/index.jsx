@@ -21,7 +21,7 @@ class StopWatch extends Component {
       this.setState({
         currentTime: this.state.currentTime + 1,
       });
-    }, 1000);
+    }, 100);
   };
 
   stop = () => {
