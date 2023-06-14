@@ -1,4 +1,4 @@
-import queryString from 'query-string';
+import queryString from "query-string";
 
 /**
  *
@@ -14,8 +14,9 @@ export const getUsers = (options = {}) => {
   const defaultOptions = {
     page: 1,
     results: 10,
-    seed: 'testSeed',
-    format: 'json',
+    seed: "testSeed",
+    format: "json",
+    inc: ["gender", "name", "email", "login", "picture"],
   };
 
   const finalOptions = {
@@ -23,7 +24,7 @@ export const getUsers = (options = {}) => {
     ...options,
   };
 
-  const str = queryString.stringify(finalOptions);
+  const str = queryString.stringify(finalOptions,{arrayFormat:'comma'});
 
   const response = fetch(`https://randomuser.me/api/?${str}`).then((response) =>
     response.json()
