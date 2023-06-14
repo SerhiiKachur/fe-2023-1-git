@@ -49,6 +49,7 @@ class App extends React.Component {
             path="/contacts"
             render={(libProps) => <Contacts {...libProps} />}
           />
+          <Route path="*" component={NotFound}/>
         </Switch>
       </BrowserRouter>
     );
@@ -69,5 +70,7 @@ const Contacts = (props) => {
   console.log(props);
   return <div>Contacts</div>;
 };
+
+const NotFound = ()=> <div>404 Page not Found</div>
 
 export default App;
