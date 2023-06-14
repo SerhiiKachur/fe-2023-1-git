@@ -1,8 +1,8 @@
-import React from 'react';
-import StopWatch from './Components/StopWatch';
-import LoginForm from './Components/LoginForm';
-import MessageDashboard from './Components/MessageDashboard'
-import { UsersLoader } from './Components/UsersLoader';
+import React from "react";
+import StopWatch from "./Components/StopWatch";
+import LoginForm from "./Components/LoginForm";
+import MessageDashboard from "./Components/MessageDashboard";
+import UsersLoader from "./Components/UsersLoader";
 
 class App extends React.Component {
   constructor(props) {
@@ -15,15 +15,14 @@ class App extends React.Component {
 
   handleIsVisible = () => {
     this.setState({
-      isVisible: !this.state.isVisible
-    })
-  }
+      isVisible: !this.state.isVisible,
+    });
+  };
 
   render() {
     const { isVisible } = this.state;
     return (
       <>
-        
         <UsersLoader />
       </>
     );
