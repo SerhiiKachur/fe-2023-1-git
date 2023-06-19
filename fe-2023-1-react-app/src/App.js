@@ -1,76 +1,76 @@
-import React from "react";
-import UsersLoader from "./Components/UsersLoader";
-import { BrowserRouter, Switch, Router, Link } from "react-router-dom";
-import { Route } from "react-router-dom/cjs/react-router-dom.min";
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import PostsPage from './pages/PostsPage';
+import Tree from './components/Tree';
+import { UserContext, ThemeContext } from './contexts';
+import CONSTANTS from './constants';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isVisible: false,
+      user: {
+        id: 1,
+        firstName: 'User',
+        lastName: 'Userenko',
+        imageSrc: 'picture.jpeg',
+      },
+      theme: CONSTANTS.THEMES.DARK,
     };
   }
 
-  handleIsVisible = () => {
+  changeTheme = (newTheme) => {
     this.setState({
-      isVisible: !this.state.isVisible,
+      theme: newTheme,
     });
   };
 
   render() {
-    const { isVisible } = this.state;
+    const { user, theme } = this.state;
+
     return (
       <BrowserRouter>
-        <header>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/contacts">Contacts</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
         <Switch>
-        <Route exact path='/'>
-            {(libProps) => <Home {...libProps} />}
+          <Route exact path='/'>
+            {(libProps) => <HomePage {...libProps} />}
           </Route>
 
-          <Route path="/about" component={About} />
+          <Route path='/about' component={AboutPage} />
+          <Route path='/posts' component={PostsPage} />
 
-          <Route
-            path="/contacts"
-            render={(libProps) => <Contacts {...libProps} />}
-          />
-          <Route path="*" component={NotFound}/>
+
+          <Route path='*' component={NotFound} />
         </Switch>
       </BrowserRouter>
     );
+
+    // const props = {
+    //   // value: {
+    //   //   theme,
+    //   //   changeTheme: this.changeTheme
+    //   // }
+    //   // value: [theme, this.changeTheme]
+    // }
+
+    // return (
+    //   <ThemeContext.Provider value={[theme, this.changeTheme]}>
+    //     <UserContext.Provider value={user}>
+    //       <Tree />
+    //       <Sidebar />
+          
+    //     </UserContext.Provider>
+    //   </ThemeContext.Provider>
+    // );
   }
 }
-const Home = (props) => {
-  console.log(props);
-  return <div>Home</div>;
-};
-const About = (props) => {
-  console.log(props);
-  
-  setTimeout(()=> props.history.push('/'),3000);
 
-  return <div>About</div>;
-};
-const Contacts = (props) => {
-  console.log(props);
-  return <div>Contacts</div>;
-};
 
-const NotFound = ()=> <div>404 Page not Found</div>
+
+const NotFound = () => <div>404 Page not found</div>;
 
 export default App;
