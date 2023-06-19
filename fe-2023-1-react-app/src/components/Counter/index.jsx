@@ -1,37 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class Counter extends React.Component {
-  constructor(props) {
-    super(props);
+function Counter(props) {
+  const [clicks, setClicks] = useState(0);
+  const [coords, setCoords] = useState({
+    x: 0,
+    y: 0,
+  });
 
-    this.state = {
-      count: 0,
-    };
-  }
+  const add = (e) => {
+    setClicks(clicks + 1);
+  };
 
-  add = () => {
-    this.setState({
-      count: this.state.count + 1,
+  const subtract = () => {
+    setClicks(clicks - 1);
+  };
+
+  const mouseMoveHandler = (e) => {
+    const { clientX, clientY } = e;
+
+    setCoords({
+      x: clientX,
+      y: clientY,
     });
   };
 
-  subtract = () => {
-    this.setState({
-      count: this.state.count - 1,
-    });
-  }
-
-  render() {
-    const { count } = this.state;
-
-    return (
-      <>
-        <p>Count is {count}</p>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.subtract}>Subtract</button>
-      </>
-    );
-  }
+  return (
+    <div
+      style={{
+        padding: '40px',
+        border: '5px solid black',
+      }}
+      onMouseMove={mouseMoveHandler}
+    >
+      <p>Counter is {clicks}</p>
+      <p>X coordinate is {coords.x}</p>
+      <p>Y coordinate is {coords.y}</p>
+      <button onClick={add}>Add</button>
+      <button onClick={subtract}>Subtract</button>
+    </div>
+  );
 }
 
 export default Counter;

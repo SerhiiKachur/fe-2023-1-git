@@ -8,7 +8,7 @@ import { UserContext, ThemeContext } from './contexts';
 import CONSTANTS from './constants';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import Counter from './components/Counter/classVersion';
+import Counter from './components/Counter';
 
 class App extends React.Component {
   constructor(props) {

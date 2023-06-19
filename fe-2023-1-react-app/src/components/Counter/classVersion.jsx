@@ -1,22 +1,37 @@
-import React, { useState } from "react";
+import React from 'react';
 
-function Counter(props) {
-  const [state, setState] = useState(0);
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const add = () => {
-    setState(state + 1);
+    this.state = {
+      count: 0,
+    };
+  }
+
+  add = () => {
+    this.setState({
+      count: this.state.count + 1,
+    });
   };
-  const substract = () => {
-    setState(state - 1);
-  };
 
-  return (
-    <>
-      <p>Counter is {state}</p>
-      <button onClick={add}>Add</button>
-      <button onClick={substract}>Substract</button>
-    </>
-  );
+  subtract = () => {
+    this.setState({
+      count: this.state.count - 1,
+    });
+  }
+
+  render() {
+    const { count } = this.state;
+
+    return (
+      <>
+        <p>Count is {count}</p>
+        <button onClick={this.add}>Add</button>
+        <button onClick={this.subtract}>Subtract</button>
+      </>
+    );
+  }
 }
 
 export default Counter;
