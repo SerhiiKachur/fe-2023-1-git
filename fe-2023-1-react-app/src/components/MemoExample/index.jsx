@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import classNames from 'classnames';
 import { ThemeContext } from '../../contexts';
-import styles from './style.module.css';
+import styles from './MemoExample.module.scss';
 import CONSTANTS from '../../constants';
 
 const { THEMES } = CONSTANTS;

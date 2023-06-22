@@ -1,28 +1,48 @@
-import React, { useState } from 'react';
+import { useCoords } from '../../hooks';
+import React, { useState, useEffect, useRef } from 'react';
+
+// Створити користувацький хук useCoords
+// який буде слідкувати за рухами миши користувача
 
 function Counter(props) {
   const [clicks, setClicks] = useState(0);
-  const [coords, setCoords] = useState({
-    x: 0,
-    y: 0,
+  const prevClicks = useRef(null);
+  const renders = useRef(1);
+  const divRef = useRef(null);
+  // const testRef = useRef('test');
+  // const coords = useCoords(divRef);
+
+  useEffect(() => {
+    document.title = `Current count is ${clicks}`;
+  }, [clicks]);
+
+  useEffect(() => {
+    renders.current = renders.current + 1;
   });
 
   const add = (e) => {
-    setClicks(clicks + 1);
+    function handleNewClick(oldClicks) {
+      prevClicks.current = oldClicks;
+      return oldClicks + 1;
+    }
+
+    setClicks(handleNewClick);
   };
+
+  // useEffect(() => {
+  //   window.addEventListener('click', add);
+  //   return () => {
+  //     window.removeEventListener('click', add);
+  //   };
+  // }, [add]);
 
   const subtract = () => {
     setClicks(clicks - 1);
   };
 
-  const mouseMoveHandler = (e) => {
-    const { clientX, clientY } = e;
+  // console.log(testRef.current);
 
-    setCoords({
-      x: clientX,
-      y: clientY,
-    });
-  };
+  // testRef.current = 'what is this magic';
 
   return (
     <div
@@ -30,11 +50,13 @@ function Counter(props) {
         padding: '40px',
         border: '5px solid black',
       }}
-      onMouseMove={mouseMoveHandler}
+      ref={divRef}
     >
       <p>Counter is {clicks}</p>
-      <p>X coordinate is {coords.x}</p>
-      <p>Y coordinate is {coords.y}</p>
+      <p>Previously there was {prevClicks.current} clicks</p>
+      <p>There was {renders.current} renders</p>
+      {/* <p>X coordinate is {coords.x}</p>
+      <p>Y coordinate is {coords.y}</p> */}
       <button onClick={add}>Add</button>
       <button onClick={subtract}>Subtract</button>
     </div>

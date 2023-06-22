@@ -1,63 +1,25 @@
-import React, { Component } from 'react';
 import { getPosts } from '../../api';
+import { useData } from '../../hooks';
 
-class PostsLoader extends Component {
-  constructor(props) {
-    super(props);
+function PostsLoader(props) {
+  const { data: posts, isLoading, error } = useData(getPosts);
 
-    this.state = {
-      posts: [],
-      isLoading: false,
-      error: null,
-    };
+  if (error) {
+    return <div>{error.message}</div>;
   }
 
-  load = () => {
-    this.setState({ isLoading: true });
-
-    getPosts()
-      .then((posts) => {
-        this.setState({
-          // posts: posts,
-          posts,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          error,
-        });
-      })
-      .finally(() => {
-        this.setState({
-          isLoading: false,
-        });
-      });
-  };
-
-  componentDidMount() {
-    this.load();
+  if (isLoading) {
+    return <div>Loading ...</div>;
   }
 
-  render() {
-    const { posts, isLoading, error } = this.state;
+  const postsElems = posts.map((post) => (
+    <article key={post.id}>
+      <h1>{post.title}</h1>
+      <p>{post.body}</p>
+    </article>
+  ));
 
-    if (error) {
-      return <div>{error.message}</div>;
-    }
-
-    if (isLoading) {
-      return <div>Loading ...</div>;
-    }
-
-    const postsElems = posts.map((post) => (
-      <article key={post.id}>
-        <h1>{post.title}</h1>
-        <p>{post.body}</p>
-      </article>
-    ));
-
-    return <div>{postsElems}</div>;
-  }
+  return <div>{postsElems}</div>;
 }
 
 export default PostsLoader;
