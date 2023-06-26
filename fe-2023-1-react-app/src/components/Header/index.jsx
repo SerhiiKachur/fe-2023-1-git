@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SignUpPage from '../../pages/SignUpPage';
 
 function Header(props) {
   return (
@@ -17,9 +18,6 @@ function Header(props) {
           </li>
           <li>
             <Link to='/posts'>Posts</Link>
-          </li>
-          <li>
-            <Link to="/singup">Sing Up</Link>
           </li>
         </ul>
       </nav>

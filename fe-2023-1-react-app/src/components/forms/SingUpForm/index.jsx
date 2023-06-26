@@ -1,86 +1,55 @@
-import React, { useReducer } from 'react';
-
-function reducer(state, action) {
-  const {name, value} = action;
-
-  const newState = {
-    ...state,
-    [name] : value
-  }
-
-  return newState;
-}
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { SIGN_UP_SCHEMA } from '../../../utils/validationSchemas';
 
 const initialState = {
   firstName: '',
   lastName: '',
-  email: '',
+  email: 'test@test.test',
   password: '',
   isAgree: false,
 };
 
 function SignUpForm(props) {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-
-    // signUp();
-  };
-
-  const changeHandler = ({ target: { value, name, type, checked } }) => {
-    const newValue = type === 'checkbox' ? checked : value;
-
-    const action = {
-      name,
-      value: newValue,
-    };
-
-    dispatch(action);
+  const onSumbit = (values, formikBag) => {
+    console.log(values);
+    console.log(formikBag);
+    formikBag.resetForm();
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <input
-        type='text'
-        name='firstName'
-        placeholder='firstName'
-        value={state.firstName}
-        onChange={changeHandler}
-      />
-      <input
-        type='text'
-        name='lastName'
-        placeholder='lastName'
-        value={state.lastName}
-        onChange={changeHandler}
-      />
-      <input
-        type='email'
-        name='email'
-        placeholder='email'
-        value={state.email}
-        onChange={changeHandler}
-      />
-      <input
-        type='password'
-        name='password'
-        placeholder='password'
-        value={state.password}
-        onChange={changeHandler}
-      />
-      <label>
-        <input
-          type='checkbox'
-          name='isAgree'
-          checked={state.isAgree}
-          onChange={changeHandler}
-        />
-        Agree to terms of service
-      </label>
-
-      <button>Sign Up</button>
-    </form>
+    <Formik
+      initialValues={initialState}
+      onSubmit={onSumbit}
+      validationSchema={SIGN_UP_SCHEMA}
+    >
+      {(props) => {
+        console.log(props);
+        const condition = Object.entries(props.errors).length > 0;
+        return (
+          <Form>
+            <Field name='firstName' placeholder='firstName' />
+            <ErrorMessage name='firstName'>
+              {(msg) => <div>{msg}</div>}
+            </ErrorMessage>
+            <Field name='lastName' placeholder='lastName' />
+            <ErrorMessage
+              name='lastName'
+              component={'div'}
+              style={{ color: 'red' }}
+            />
+            <Field name='email' type='email' placeholder='email' />
+            <ErrorMessage name='email' component={'div'} />
+            <Field name='password' type='password' placeholder='password' />
+            <ErrorMessage name='password' component={'div'} />
+            <Field name='isAgree' type='checkbox' />
+            <button type='submit' disabled={condition}>
+              Submit
+            </button>
+          </Form>
+        );
+      }}
+    </Formik>
   );
 }
 
