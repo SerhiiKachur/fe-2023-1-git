@@ -18,6 +18,9 @@ function Header(props) {
           <li>
             <Link to='/posts'>Posts</Link>
           </li>
+          <li>
+            <Link to="/singup">Sing Up</Link>
+          </li>
         </ul>
       </nav>
     </header>
